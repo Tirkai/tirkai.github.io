@@ -12,32 +12,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0;
+        margin: 0;
         font: 60px/1.6em "Roboto",sans-serif;
         font-weight: 300;
         text-align: center;
         color: #666666;
         height: 100vh;
+        overflow: hidden;
     }
-    .content{
-        padding: 50px 100px;
-    }
-    .image{
-        padding: 40px 0;
+    video{
+        width: 100vw;
     }
 </style>
 <body>
-    <div class="content">
-        Когда нибудь и тут появится прекрасный оазис!<br>
-        Но не сегодня, ибо мне лень :/
-        <br>
-        <a href="http://t.me/Tirkai">
-            <img class="image" src="cat.png" alt="">
-        </a>
-    </div>
+    <video src="bread.mp4" class="video"></video>
     <script>
-        setTimeout(() => {
-            location.href = "http://t.me/Tirkai";
-        }, 5000);
+        const video = document.querySelector('.video');
+        video.play();
     </script>
 </body>
 </html>
